@@ -65,10 +65,9 @@ def main():
 	
 	rospy.loginfo("Goal reached")
 
-	#After the loop, stops the robot
+	#Force the robot to stop
 	vel_msg.linear.x = 0
 
-	#Force the robot to stop
 	velocity_publisher.publish(vel_msg)
 
 	var_loop_rate.sleep()
