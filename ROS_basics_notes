@@ -1,0 +1,105 @@
+ROS summary
+
+Create catkin workspace 
+
+1.	cd ~/
+	mkdir --parents catkin_ws/src
+	cd catkin_ws
+
+2. init the catkin workspace
+
+	catkin init
+	catkin clean -y		----> used to rebuild the workspace
+
+
+3. Build the workspace
+	
+	cd ~/catkin_ws
+	catkin build
+
+4. Now to make your workspace visible to ROS. Source the setup file in the devel directory
+
+	source ~/catkin_ws/devel/setup.bash
+
+5. To save typing, add this to your .bashrc
+	
+	gedit ~/.bashrc
+
+   Add to the end: source ~/catkin_ws/devel/setup.bash
+
+
+
+Create ROS package
+
+1.  cd ~/catkin_ws/src
+
+2.  catkin_create_pkg <package_name> [depend1] [depend2] [depend3]
+
+	eg: catkin_create_pkg pkg_ros_basics std_msgs rospy roscpp
+
+3. cd ~/catkin_ws
+   catkin build
+
+
+Create ROS nodes
+
+1. cd ~/catkin_ws/src/pkg_ros_basics (or) roscd pkg_ros_basics
+
+2. mkdir scripts
+   cd scripts
+
+3. Create a python script inside the script dir
+
+4. Make the script executable 
+	sudo chmod +x node_hello_ros.py
+
+5. Now to run the ROS node, run the below cmds in differnt tabs
+
+	roscore
+	rosrun pkg_ros_basics node_hello_ros.py
+
+Command rosrun:
+	rosrun <package> <executable>
+
+Command rosnode:
+	rosnode -h
+	rosnode list
+	rosnode info
+	rosnode kill
+
+To start ROS Master run roscore
+
+
+Ros parameter server is used to load and access data and stored in config dir.
+Parameters are loaded using YAML file
+
+
+Ros launch files are used to launch multiple nodes and load multiple parameters using a single command
+	
+	roslaunch <package> file.launch
+
+Steps to create a launch file
+
+1. create a launch dir
+2. Add required nodes and parameters to the .launch file. We can also add scripts to ros launch
+
+
+ROS Topics
+
+1. ROS Topics allow unidirectional communication between ROS Nodes.
+2. A ROS Node acting as a publisher can publish data on a ROS Topic and a subscriber ROS Node can 	   subscribe to a ROS Topic.
+3. Publisher and Subscriber Nodes will exchange ROS Messages over a ROS Topic.
+4. A ROS Message is a simple data structure, comprising typed fields (integer, floating point, boolean, etc.). So a ROS Message can hold data of various data-types.
+
+Command: 	rostopic -h
+		rostopic list
+		rostopic type [topic]
+		rosmsg show geometry_msgs/Twist
+		rostopic type /turtle1/cmd_vel
+		rostopic pub [topic] [msg_type] [args]		---> used to publish data on to a topic
+		rostopic echo [topic]				---> shows the data published on a topic
+	
+
+		
+
+
