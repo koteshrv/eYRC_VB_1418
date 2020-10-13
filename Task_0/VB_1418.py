@@ -1,13 +1,18 @@
 #!/usr/bin/env python
 
+"""
+    eYRC 2020-21
+    Task 0
+    #1418
+"""
+
 import math
 import rospy
 from geometry_msgs.msg import Twist
 from turtlesim.msg import Pose
 
-# Move the turtle inside the turtlesim window in a circle and stop at its initial location.
 def move():
-
+    """ Move the turtle inside the turtlesim window in a circle and stop at its initial location."""
     # Make the script a ROS Node.
     rospy.init_node('node_turtle_revolving', anonymous=True)
 
