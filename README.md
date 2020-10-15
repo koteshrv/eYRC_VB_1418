@@ -1,6 +1,6 @@
-## eYRC_VB_1418
+## eYRC_VB_1418  
 
-### Vargi Bots (VB)
+### Vargi Bots [**(VB)**](https://github.com/koteshrv/Vargi_Bots_1418)  
 It is predicted in a study that by 2025, 100 billion connections - 90% from intelligent sensors to machines of all kinds will link the globe as a direct result of information and communication technologies. Industry 4.0 is all about technology intensifying processes involved in manufacturing and warehouse operations. Such as automation in loading and unloading, pick, place and stock management. However, this doesn’t only mean building models for all essential tasks to reduce manual labour but means using automation to smartly work the tasks and make continuous improvements. Almost all warehouse management systems (WMS) follow various inventory practices to optimize processes.
 
 Inspired by this visualisation of Industry 4.0, the current edition of the e-Yantra Robotics Competition features a theme called ‘Vargi-Bots’. Vargi is taken from a Sanskrit word, Vargikaran (वर्गीकरण) which means to separate objects based on their category. The theme is set in the abstraction of a warehouse management system designed in Gazebo, which is a 3D dynamic simulator used to efficiently simulate robots in complex environments.
